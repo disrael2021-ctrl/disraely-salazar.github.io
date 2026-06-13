@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Blog on Disraely Salazar</title>
+		<link>https://disraelysalazar.github.io/categories/blog/</link>
+		<description>Recent content in Blog on Disraely Salazar</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="https://disraelysalazar.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>From Operations to Data Analytics: Why I Made the Switch</title>
+				<link>https://disraelysalazar.github.io/blogs/from-operations-to-data-analytics/</link>
+				<pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+				<guid>https://disraelysalazar.github.io/blogs/from-operations-to-data-analytics/</guid>
+				<description>&lt;p&gt;For most of my career, data was something I worked &lt;em&gt;with&lt;/em&gt;, not something I studied. As a purchasing and sales manager, I tracked supplier pricing, monitored margins, resolved discrepancies, and managed budgets that ran into the hundreds of thousands of dollars annually. Every decision I made was driven by numbers — but I was making sense of them manually, through spreadsheets, gut instinct, and experience.&lt;/p&gt;&#xA;&lt;p&gt;Then I started asking a different question: &lt;em&gt;What if I could do this better?&lt;/em&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>

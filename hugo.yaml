@@ -1,0 +1,323 @@
+baseURL: "https://disraelysalazar.github.io/"
+languageCode: "en-us"
+title: "Disraely Salazar"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog Posts
+      url: /blogs
+      weight: 1
+    - identifier: gallery
+      name: Gallery
+      title: Gallery
+      url: /gallery
+      weight: 2
+
+params:
+  title: "Disraely Salazar"
+  description: "Data Analytics Student & Sales Operations Professional — Toronto, ON"
+  favicon: "/fav.png"
+
+  useBootstrapCDN: false
+  mathjax: false
+  animate: true
+
+  font:
+    fontSize: 1rem
+    fontWeight: 400
+    lineHeight: 1.5
+    textAlign: left
+
+  color:
+    primaryColor: "#0d6efd"
+    secondaryBackgroundColor: "#e8f4fd"
+
+  navbar:
+    align: ms-auto
+    brandName: "Disraely Salazar"
+    disableSearch: false
+    stickyNavBar:
+      enable: true
+      showOnScrollUp: true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Disraely Salazar."
+    subtitle: "Data Analytics Student & Sales Operations Professional"
+    content: "Turning data into decisions. I bring 10+ years of B2B sales and operations experience to the world of data analytics — applying SQL, Python, Excel, and Tableau to transform raw numbers into actionable business insights."
+    image: /images/me.png
+    bottomImage:
+      enable: true
+    button:
+      enable: true
+      name: "Resume"
+      url: "/files/Disraely_Salazar_Resume.pdf"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-linkedin
+          url: https://linkedin.com/in/disraelysalazar
+        - icon: fab fa-github
+          url: https://github.com/disraelysalazar
+        - icon: fa fa-envelope
+          url: mailto:disrael2021@gmail.com
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.png"
+    content: |-
+      I am a Data Analytics student at triOS College in Toronto, ON, combining 10+ years of hands-on business experience with emerging technical skills in data analysis and visualization.
+
+      My professional background spans B2B sales, purchasing management, supply chain operations, and accounts payable — roles that required constant data interpretation, margin analysis, and decision-making under pressure. Now I am formalizing those instincts with tools like SQL, Python, Tableau, and advanced Excel to build a career in data analytics and business intelligence.
+
+      I am bilingual in English and Spanish, and I hold international credential evaluations (WES) for two university degrees from Venezuela.
+    skills:
+      enable: true
+      title: "Technical skills I am building:"
+      items:
+        - "SQL"
+        - "Python (Pandas, NumPy)"
+        - "Tableau"
+        - "Advanced Excel"
+        - "SAP ERP"
+        - "Data Visualization"
+        - "Pivot Tables & VLOOKUP"
+        - "Microsoft Office Suite"
+
+  # Experience
+  experience:
+    enable: true
+    items:
+      - company: "Hub Garage Co."
+        companyUrl: "#"
+        jobs:
+          - name: "Purchasing & Sales Manager"
+            date: "2024 – Apr 2026"
+            content: |-
+              Operated as the company's sole sales and purchasing lead, running the full sales cycle end-to-end — 15–20 inbound leads daily, site visits, quoting, and closing 5–6 deals per month.
+
+              - Won and managed 5 commercial contracts for venues up to 5,000 sq ft.
+              - Negotiated 10–15% supplier price reductions while maintaining competitive customer quotes.
+              - Managed ~$200K annual purchasing budget across 3 suppliers with end-to-end order fulfillment.
+              - Protected margin on every deal by controlling both the cost and revenue sides of each transaction.
+
+      - company: "The Beer Store"
+        companyUrl: "https://www.thebeerstore.ca"
+        jobs:
+          - name: "Supply Chain & Accounts Payable Specialist"
+            date: "2022 – 2024"
+            content: |-
+              Managed vendor relationships and purchase orders in SAP ERP across $2–3M in monthly vendor spend.
+
+              - Resolved 50–100 vendor discrepancies monthly through investigation and negotiation.
+              - Supported month-end reporting and distribution operations at one of Ontario's largest beverage networks.
+              - Strengthened long-term supplier relationships through consistent follow-through and problem resolution.
+
+      - company: "Incosaca"
+        companyUrl: "#"
+        jobs:
+          - name: "Owner / Procurement Director"
+            date: "2010 – 2018"
+            content: |-
+              Founded and operated a procurement business managing 30+ supplier relationships and an ~$800K CAD annual purchasing budget.
+
+              - Negotiated multi-year commercial contracts, payment terms, and delivery performance standards.
+              - Sustained business profitability over 8 years through disciplined cost control and supplier partnerships.
+
+      - company: "CORPOZULIA"
+        companyUrl: "#"
+        jobs:
+          - name: "Purchasing Manager"
+            date: "2007 – 2009"
+            content: "Managed supplier contract negotiation and maintained vendor scorecards for regional government procurement operations."
+
+      - company: "Institute of Technology of Maracaibo"
+        companyUrl: "#"
+        jobs:
+          - name: "Budget Analyst"
+            date: "2005 – 2007"
+            content: "Prepared and monitored institutional budgets, performed variance reporting, and supported financial planning for the department."
+
+  # Education
+  education:
+    enable: true
+    index: false
+    items:
+      - title: "Diploma in Data Analytics"
+        school:
+          name: "triOS College — Toronto, ON"
+          url: "https://www.trios.com"
+        date: "In Progress — Expected Aug 2027"
+        content: |-
+          Developing applied skills in data collection, cleaning, analysis, and visualization. Coursework includes:
+            - SQL and Database Management
+            - Python for Data Analysis
+            - Data Visualization with Tableau
+            - Business Intelligence Fundamentals
+            - Statistical Analysis and Reporting
+
+      - title: "Supply Chain Management Certificate"
+        school:
+          name: "Humber College — Toronto, ON"
+          url: "https://www.humber.ca"
+        date: "May 2022"
+        content: "Professional certificate covering logistics, procurement, vendor management, and distribution operations in the Canadian market."
+
+      - title: "English for Academic Purposes"
+        school:
+          name: "Humber College — Toronto, ON"
+          url: "https://www.humber.ca"
+        date: "2020 – 2021"
+        content: "Completed English language preparation program at the post-secondary level."
+
+      - title: "Master of Public Administration"
+        school:
+          name: "Universidad del Zulia — Venezuela"
+          url: "https://www.luz.edu.ve"
+        content: "Graduate degree in public administration and institutional management. WES international credential evaluation completed."
+
+      - title: "Bachelor of Accounting"
+        school:
+          name: "Universidad del Zulia — Venezuela"
+          url: "https://www.luz.edu.ve"
+        content: "Undergraduate degree in accounting and financial management. WES international credential evaluation completed."
+
+  # Achievements
+  achievements:
+    enable: true
+    items:
+      - title: WES International Credential Recognition
+        content: Successfully completed World Education Services (WES) evaluation of Venezuelan university degrees for recognition in Canada.
+        image: /images/achievement.jpg
+      - title: Supply Chain Management Certificate
+        content: Earned professional certification from Humber College, enabling a successful transition into Canadian supply chain and operations roles.
+        image: /images/achievement.jpg
+      - title: Bilingual Professional — English and Spanish
+        content: Fully fluent in English and Spanish, enabling effective communication across North American and Latin American supplier and customer networks.
+        image: /images/achievement.jpg
+      - title: $200K+ Annual Purchasing Portfolio
+        content: Managed end-to-end purchasing operations at Hub Garage Co. as the sole purchasing lead, securing 10–15% supplier price reductions while protecting customer margins.
+        image: /images/achievement.jpg
+
+  # Projects
+  projects:
+    enable: true
+    items:
+      - title: Sales Performance Dashboard
+        content: Built an Excel dashboard to track monthly sales performance, lead conversion rates, and margin trends using Pivot Tables, VLOOKUP, and conditional formatting. Inspired by real-world data from building materials distribution.
+        image: /images/projects/profile.png
+        featured:
+          name: View on GitHub
+          link: https://github.com/disraelysalazar
+        badges:
+          - "Excel"
+          - "Pivot Tables"
+          - "Data Visualization"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/disraelysalazar
+
+      - title: Supply Chain Data Analysis
+        content: Applied SQL queries and Python (Pandas) to analyze supplier performance data, identifying cost-saving opportunities and delivery bottlenecks in a simulated distribution dataset modelled on real supply chain operations.
+        image: /images/projects/converter.jpg
+        featured:
+          name: View on GitHub
+          link: https://github.com/disraelysalazar
+        badges:
+          - "SQL"
+          - "Python"
+          - "Pandas"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/disraelysalazar
+
+      - title: Customer Segmentation Analysis
+        content: Performed RFM (Recency, Frequency, Monetary) segmentation on a retail dataset using Python and visualized customer groups in Tableau to support marketing and sales targeting decisions.
+        image: /images/projects/profile2.jpg
+        featured:
+          name: View on GitHub
+          link: https://github.com/disraelysalazar
+        badges:
+          - "Python"
+          - "Tableau"
+          - "RFM Analysis"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/disraelysalazar
+
+  # Contact
+  contact:
+    enable: true
+    content: "I am open to opportunities in data analytics, business intelligence, and sales operations. Whether you have a question or want to connect professionally, feel free to reach out!"
+    btnName: Email Me
+    btnLink: mailto:disrael2021@gmail.com
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/disraelysalazar
+      linkedin: https://linkedin.com/in/disraelysalazar
+
+  listPages:
+    disableFeaturedImage: false
+
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
