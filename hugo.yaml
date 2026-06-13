@@ -12,6 +12,8 @@ outputs:
     - "HTML"
     - "RSS"
 
+publishDir: docs
+
 enableRobotsTXT: true
 
 pagination:
