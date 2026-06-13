@@ -15,6 +15,7 @@ outputs:
 publishDir: docs
 
 enableRobotsTXT: true
+relativeURLs: true
 
 pagination:
   pagerSize: 3
