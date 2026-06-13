@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Image Gallery on Disraely Salazar</title>
-		<link>https://disraelysalazar.github.io/gallery/</link>
+		<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/gallery/</link>
 		<description>Recent content in Image Gallery on Disraely Salazar</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -12,6 +12,6 @@
 		
 			<lastBuildDate></lastBuildDate>
 		
-			<atom:link href="https://disraelysalazar.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://disrael2021-ctrl.github.io/disraely-salazar.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
 	</channel>
 </rss>
