@@ -6,7 +6,20 @@ author: "Disraely Salazar"
 tags: ["data ethics", "anonymity", "privacy", "informed consent", "data science"]
 categories: ["blog"]
 description: "When a survey promises anonymity but requires a login, something is fundamentally broken. Here is what a data analyst should do about it."
+image: /images/slides/slide-01.jpg
 ---
+
+<div style="background:#EFF6FF;border-left:4px solid #0D6EFD;border-radius:6px;padding:1rem 1.25rem;margin-bottom:2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+  <div>
+    <strong style="color:#1A1A3E;">Presentation available:</strong>
+    <span style="color:#475569;"> This article has a companion slide deck covering the same analysis.</span>
+  </div>
+  <a href="/files/DataEthics_DisraelySalazar.pptx"
+     download
+     style="background:#0D6EFD;color:#fff;padding:0.45rem 1.1rem;border-radius:5px;text-decoration:none;font-size:0.9rem;font-weight:600;white-space:nowrap;">
+    &#8659; Download Slides (.pptx)
+  </a>
+</div>
 
 Imagine completing a survey at the end of a training course. The first page tells you your responses are completely anonymous. You feel comfortable being honest — maybe even critical — about the course content, the instructor, the pacing. You hit submit and move on.
 
@@ -24,11 +37,26 @@ The survey in question is administered at the end of a course. Participants acce
 
 Executive management wants to use the results to decide which courses need to be redesigned or updated. My job, as the data analyst, is to provide those insights.
 
+<figure style="margin:2rem 0;">
+  <img src="/images/slides/slide-02.jpg" alt="Survey scenario overview" style="width:100%;border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,0.13);">
+  <figcaption style="text-align:center;color:#64748b;font-size:0.85rem;margin-top:0.6rem;">What the survey actually looks like — and the promise it makes participants.</figcaption>
+</figure>
+
 Here is the problem: the moment a participant logs in, their identity is no longer hidden. Their responses are traceable — whether or not anyone currently intends to trace them.
+
+<figure style="margin:2rem 0;">
+  <img src="/images/slides/slide-03.jpg" alt="What the survey claims vs the reality" style="width:100%;border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,0.13);">
+  <figcaption style="text-align:center;color:#64748b;font-size:0.85rem;margin-top:0.6rem;">The gap between what the survey claims and what the system actually does.</figcaption>
+</figure>
 
 ---
 
 ## Question 1: What Ethical Issues Are Apparent in the Survey Design?
+
+<figure style="margin:2rem 0;">
+  <img src="/images/slides/slide-04.jpg" alt="Three ethical issues: False Anonymity, Informed Consent, Response Bias" style="width:100%;border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,0.13);">
+  <figcaption style="text-align:center;color:#64748b;font-size:0.85rem;margin-top:0.6rem;">Three distinct ethical failures in this survey's design.</figcaption>
+</figure>
 
 ### The Anonymity Problem
 
@@ -37,6 +65,11 @@ The most glaring issue is the contradiction between the promise of **anonymity**
 When users log in with their credentials, the system almost certainly logs that session. Even if the survey platform does not directly store who answered what, server logs, authentication records, and access timestamps can be cross-referenced to reconstruct who submitted a response and when. What is being offered here is not anonymity — it is the *appearance* of anonymity, which is arguably worse.
 
 In data science ethics, this distinction matters enormously. **Pseudonymity** — where a person's name is replaced by an identifier — is often confused with anonymity. In this case, the survey is not even pseudonymous in a clean sense. It is just a survey where the name field was removed while the identifying infrastructure was left fully intact.
+
+<figure style="margin:2rem 0;">
+  <img src="/images/slides/slide-05.jpg" alt="Anonymity vs Pseudonymity comparison" style="width:100%;border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,0.13);">
+  <figcaption style="text-align:center;color:#64748b;font-size:0.85rem;margin-top:0.6rem;">True anonymity vs. what this survey actually provides — a critical distinction in data ethics.</figcaption>
+</figure>
 
 ### Informed Consent and Deception
 
@@ -54,6 +87,11 @@ The first survey question — a satisfaction rating scale — carries its own co
 
 Beyond the obvious problems, several subtler ethical risks deserve attention.
 
+<figure style="margin:2rem 0;">
+  <img src="/images/slides/slide-06.jpg" alt="Four additional ethical risks" style="width:100%;border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,0.13);">
+  <figcaption style="text-align:center;color:#64748b;font-size:0.85rem;margin-top:0.6rem;">Four compounding ethical risks that go beyond the obvious anonymity problem.</figcaption>
+</figure>
+
 **Power imbalance and coercion.** Participants are employees or students being surveyed by an organization that has authority over them. Even if anonymity were genuinely guaranteed, people in power-asymmetric relationships often self-censor. The short availability window adds pressure — participants cannot take time to think carefully or decline without missing the survey entirely.
 
 **Data minimization.** A core principle in ethical data practice is collecting only the data you actually need. Requiring a full login — with credentials that authenticate a person's identity — is excessive for a survey that only needs to know which course is being evaluated. The course name could have been entered manually or embedded in the URL without any login at all.
@@ -67,6 +105,11 @@ Beyond the obvious problems, several subtler ethical risks deserve attention.
 ## Question 3: What Recommendations Would I Make to Executive Management?
 
 As the data analyst on this project, I would make the following recommendations before proceeding with any analysis:
+
+<figure style="margin:2rem 0;">
+  <img src="/images/slides/slide-07.jpg" alt="Five recommendations to management" style="width:100%;border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,0.13);">
+  <figcaption style="text-align:center;color:#64748b;font-size:0.85rem;margin-top:0.6rem;">Five concrete steps to fix this survey before analysis proceeds.</figcaption>
+</figure>
 
 **1. Redesign the survey to eliminate the login requirement.** Use a unique, randomized URL for each course cohort — one that does not tie responses to individual accounts. This removes the identity linkage at the system level.
 
@@ -84,6 +127,11 @@ As the data analyst on this project, I would make the following recommendations 
 
 This is the hardest part of the job, and the most important.
 
+<figure style="margin:2rem 0;">
+  <img src="/images/slides/slide-08.jpg" alt="Four ethical paths when management refuses" style="width:100%;border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,0.13);">
+  <figcaption style="text-align:center;color:#64748b;font-size:0.85rem;margin-top:0.6rem;">The ethical analyst still has options — and obligations — when management dismisses concerns.</figcaption>
+</figure>
+
 If executive management reviews my concerns and dismisses them, I have several ethical paths available to me:
 
 **Document everything in writing.** I would submit my concerns formally — via email or a written memo — so there is a record that the issues were raised and the decision to proceed was made by management, not by me. This protects both my professional integrity and creates accountability.
@@ -98,6 +146,15 @@ If executive management reviews my concerns and dismisses them, I have several e
 
 ---
 
+## The Five Core Concepts Behind This Analysis
+
+<figure style="margin:2rem 0;">
+  <img src="/images/slides/slide-09.jpg" alt="Five key ethics concepts" style="width:100%;border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,0.13);">
+  <figcaption style="text-align:center;color:#64748b;font-size:0.85rem;margin-top:0.6rem;">The five data ethics principles at the centre of this case.</figcaption>
+</figure>
+
+---
+
 ## Conclusion: Anonymity Is Not a Label, It Is a Design Commitment
 
 The scenario described in this post is not exotic. Organizations collect data under ambiguous or misleading conditions all the time — not always with bad intentions, but often without thinking through the full implications. The data analyst's role is not just to run queries and produce charts. It is to ask whether the data was collected ethically, whether the analysis serves the people it affects, and whether the insights being generated can be trusted.
@@ -107,6 +164,10 @@ In this case, a survey that promises anonymity but requires a login fails on inf
 Good data starts with ethical collection. If the foundation is compromised, no amount of analytical sophistication fixes what comes after.
 
 As data professionals, we have both the responsibility and the standing to say so — clearly, in writing, and more than once if necessary.
+
+<figure style="margin:2rem 0;">
+  <img src="/images/slides/slide-10.jpg" alt="Conclusion slide" style="width:100%;border-radius:10px;box-shadow:0 4px 18px rgba(0,0,0,0.13);">
+</figure>
 
 ---
 
