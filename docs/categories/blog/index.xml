@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sun, 12 Oct 2025 00:00:00 +0000</lastBuildDate>
 		
 			<atom:link href="https://disrael2021-ctrl.github.io/disraely-salazar.github.io/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>The Illusion of Anonymity: What a Simple Course Survey Reveals About Data Science Ethics</title>
+				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/blogs/data-ethics-survey-anonymity/</link>
+				<pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
+				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/blogs/data-ethics-survey-anonymity/</guid>
+				<description>&lt;p&gt;Imagine completing a survey at the end of a training course. The first page tells you your responses are completely anonymous. You feel comfortable being honest — maybe even critical — about the course content, the instructor, the pacing. You hit submit and move on.&lt;/p&gt;&#xA;&lt;p&gt;Now imagine that the same survey required you to log in with your work username and password before you could even see the first question.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>From Operations to Data Analytics: Why I Made the Switch</title>
 				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/blogs/from-operations-to-data-analytics/</link>
