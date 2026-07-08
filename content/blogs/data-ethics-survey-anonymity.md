@@ -9,7 +9,15 @@ description: "When a survey promises anonymity but requires a login, something i
 image: /images/slides/slide-01.jpg
 ---
 
-<div style="background:#EFF6FF;border-left:4px solid #0D6EFD;border-radius:6px;padding:1rem 1.25rem;margin-bottom:2rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+Imagine completing a survey at the end of a training course. The first page tells you your responses are completely anonymous. You feel comfortable being honest — maybe even critical — about the course content, the instructor, the pacing. You hit submit and move on.
+
+Now imagine that the same survey required you to log in with your work username and password before you could even see the first question.
+
+Does that still feel anonymous to you?
+
+This is the scenario I want to examine today — not because it is fictional, but because it represents a type of ethical failure that shows up constantly in organizational data collection. It looks harmless on the surface. It is not. And as a data analyst assigned to draw actionable insights from this data, I am right in the middle of it.
+
+<div style="background:#EFF6FF;border-left:4px solid #0D6EFD;border-radius:6px;padding:1rem 1.25rem;margin:1.5rem 0;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
   <div>
     <strong style="color:#1A1A3E;">Presentation available:</strong>
     <span style="color:#475569;"> This article has a companion slide deck covering the same analysis.</span>
@@ -20,14 +28,6 @@ image: /images/slides/slide-01.jpg
     &#8659; Download Slides (.pptx)
   </a>
 </div>
-
-Imagine completing a survey at the end of a training course. The first page tells you your responses are completely anonymous. You feel comfortable being honest — maybe even critical — about the course content, the instructor, the pacing. You hit submit and move on.
-
-Now imagine that the same survey required you to log in with your work username and password before you could even see the first question.
-
-Does that still feel anonymous to you?
-
-This is the scenario I want to examine today — not because it is fictional, but because it represents a type of ethical failure that shows up constantly in organizational data collection. It looks harmless on the surface. It is not. And as a data analyst assigned to draw actionable insights from this data, I am right in the middle of it.
 
 ---
 

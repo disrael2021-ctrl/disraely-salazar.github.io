@@ -5,7 +5,6 @@ draft: false
 author: "Disraely Salazar"
 tags: ["data analytics", "career change", "supply chain", "learning", "personal"]
 categories: ["blog"]
-image: /images/blogs/career-transition.jpg
 description: "A look at why a sales and operations professional with 10+ years of experience decided to pivot into data analytics — and what the journey looks like from the inside."
 ---
 
