@@ -78,8 +78,8 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Disraely Salazar."
-    subtitle: "Data Analytics Student & Sales Operations Professional"
-    content: "Turning data into decisions. I bring 10+ years of B2B sales and operations experience to the world of data analytics — applying SQL, Python, Excel, and Tableau to transform raw numbers into actionable business insights."
+    subtitle: "Operations & Procurement Leader | Data Analytics"
+    content: "15+ years managing purchasing portfolios, supplier negotiations, and B2B sales across Canada and Venezuela — now adding the technical layer. I apply SQL, Python, Tableau, and Excel to turn the kind of operational data I have been living with for years into decisions that move the needle."
     image: /images/me.png
     bottomImage:
       enable: true
@@ -104,22 +104,26 @@ params:
     title: "About Me"
     image: "/images/me.png"
     content: |-
-      I am a Data Analytics student at triOS College in Toronto, ON, combining 10+ years of hands-on business experience with emerging technical skills in data analysis and visualization.
+      I am a Data Analytics professional combining 15+ years of operational business experience with technical skills in data analysis and visualization. Currently completing my Diploma in Data Analytics at triOS College in Toronto.
 
-      My professional background spans B2B sales, purchasing management, supply chain operations, and accounts payable — roles that required constant data interpretation, margin analysis, and decision-making under pressure. Now I am formalizing those instincts with tools like SQL, Python, Tableau, and advanced Excel to build a career in data analytics and business intelligence.
+      My background spans B2B sales, purchasing management, supply chain operations, and accounts payable — roles where I managed purchasing portfolios up to $800K, oversaw $2–3M in monthly vendor spend through SAP ERP, resolved 50–100 invoice discrepancies monthly, and closed commercial contracts worth up to 5,000 sq ft of service. Every role required me to read data fast and act on it.
 
-      I am bilingual in English and Spanish, and I hold international credential evaluations (WES) for two university degrees from Venezuela.
+      I am now formalizing those instincts with SQL, Python, Tableau, and Excel — not starting from scratch, but building the technical layer on top of a decade and a half of knowing what the numbers actually mean inside a business.
+
+      Bilingual in English and Spanish. WES-evaluated degrees in Accounting and Public Administration.
     skills:
       enable: true
-      title: "Technical skills I am building:"
+      title: "Technical Skills & Tools:"
       items:
-        - "SQL"
-        - "Python (Pandas, NumPy)"
+        - "SQL (queries, joins, aggregations, subqueries)"
+        - "Python (Pandas, NumPy, Matplotlib)"
         - "Tableau"
-        - "Advanced Excel"
+        - "Advanced Excel (Pivot Tables, Power Query, VLOOKUP)"
         - "SAP ERP"
-        - "Data Visualization"
-        - "Pivot Tables & VLOOKUP"
+        - "Data Visualization & Dashboarding"
+        - "Statistical Analysis & Reporting"
+        - "RFM & Customer Segmentation"
+        - "Data Cleaning & Wrangling"
         - "Microsoft Office Suite"
 
   # Experience
@@ -224,17 +228,23 @@ params:
   achievements:
     enable: true
     items:
-      - title: WES International Credential Recognition
-        content: Successfully completed World Education Services (WES) evaluation of Venezuelan university degrees for recognition in Canada.
+      - title: "$2–3M Monthly Vendor Spend Managed"
+        content: Oversaw purchase orders and vendor relationships through SAP ERP at The Beer Store — one of Ontario's largest beverage distribution networks — resolving 50–100 invoice discrepancies monthly with zero backlog.
         image: /images/achievement.jpg
-      - title: Supply Chain Management Certificate
-        content: Earned professional certification from Humber College, enabling a successful transition into Canadian supply chain and operations roles.
+      - title: "$800K Annual Procurement Budget — 8 Years"
+        content: Founded and operated Incosaca for 8 years, managing 30+ supplier relationships and an $800K annual purchasing budget, negotiating multi-year contracts and sustained profitability through disciplined cost control.
         image: /images/achievement.jpg
-      - title: Bilingual Professional — English and Spanish
-        content: Fully fluent in English and Spanish, enabling effective communication across North American and Latin American supplier and customer networks.
+      - title: "10–15% Supplier Cost Reductions at Hub Garage"
+        content: As sole purchasing lead, negotiated price reductions of 10–15% across 3 key suppliers while protecting customer quote margins and managing a $200K+ annual purchasing portfolio end-to-end.
         image: /images/achievement.jpg
-      - title: $200K+ Annual Purchasing Portfolio
-        content: Managed end-to-end purchasing operations at Hub Garage Co. as the sole purchasing lead, securing 10–15% supplier price reductions while protecting customer margins.
+      - title: "5 Commercial Contracts Won — Up to 5,000 sq ft"
+        content: Ran the full B2B sales cycle at Hub Garage Co. — 15–20 inbound leads daily, site visits, quoting, and closing 5–6 deals per month — landing 5 commercial venue contracts.
+        image: /images/achievement.jpg
+      - title: "Dual Degrees — WES International Recognition"
+        content: Holds a Master of Public Administration and Bachelor of Accounting from Universidad del Zulia (Venezuela), both evaluated and recognized in Canada through World Education Services (WES).
+        image: /images/achievement.jpg
+      - title: "Bilingual — English & Spanish"
+        content: Fully fluent in both languages, enabling effective communication across North American and Latin American supplier, client, and stakeholder networks throughout a 15+ year career.
         image: /images/achievement.jpg
 
   # Projects
@@ -242,10 +252,13 @@ params:
     enable: true
     items:
       - title: Sales Performance Dashboard
-        content: Built an Excel dashboard to track monthly sales performance, lead conversion rates, and margin trends using Pivot Tables, VLOOKUP, and conditional formatting. Inspired by real-world data from building materials distribution.
+        content: |-
+          Built an Excel dashboard tracking monthly sales performance, lead conversion rates, and margin trends using Pivot Tables, VLOOKUP, and conditional formatting. Modelled on real data from building materials distribution.
+
+          Key finding: 3 of 7 product lines accounted for 80% of monthly margin — concentrating sales effort on highest-value opportunities. Dynamic filters allow weekly vs. monthly performance comparison at a glance.
         image: /images/projects/profile.png
         featured:
-          name: View on GitHub
+          name: GitHub Profile
           link: https://github.com/disraelysalazar
         badges:
           - "Excel"
@@ -256,10 +269,13 @@ params:
             url: https://github.com/disraelysalazar
 
       - title: Supply Chain Data Analysis
-        content: Applied SQL queries and Python (Pandas) to analyze supplier performance data, identifying cost-saving opportunities and delivery bottlenecks in a simulated distribution dataset modelled on real supply chain operations.
+        content: |-
+          Applied SQL and Python (Pandas) to analyze supplier performance in a simulated distribution dataset modelled on real supply chain operations I managed professionally at The Beer Store and Incosaca.
+
+          Key finding: Identified 2 supplier patterns with 35%+ delivery deviation from contracted timelines — consistent with the type of discrepancies I resolved in $2–3M/month operations. Estimated $12–15K annual cost impact in rework and expediting.
         image: /images/projects/converter.jpg
         featured:
-          name: View on GitHub
+          name: GitHub Profile
           link: https://github.com/disraelysalazar
         badges:
           - "SQL"
@@ -270,10 +286,13 @@ params:
             url: https://github.com/disraelysalazar
 
       - title: Customer Segmentation Analysis
-        content: Performed RFM (Recency, Frequency, Monetary) segmentation on a retail dataset using Python and visualized customer groups in Tableau to support marketing and sales targeting decisions.
+        content: |-
+          Performed RFM (Recency, Frequency, Monetary) segmentation on a retail dataset using Python and visualized customer groups in Tableau to support targeting and retention decisions.
+
+          Key finding: Segmented 1,200+ customers into 4 behavioral groups. The top "Champions" segment — 14% of customers — drove 61% of total revenue. Insight directly supports upsell and loyalty prioritization strategy.
         image: /images/projects/profile2.jpg
         featured:
-          name: View on GitHub
+          name: GitHub Profile
           link: https://github.com/disraelysalazar
         badges:
           - "Python"
