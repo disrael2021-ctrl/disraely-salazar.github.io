@@ -1,5 +1,5 @@
 baseURL: "https://disrael2021-ctrl.github.io/disraely-salazar.github.io/"
-languageCode: "en-us"
+locale: "en-us"
 title: "Disraely Salazar"
 theme: hugo-profile
 
