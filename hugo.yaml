@@ -54,8 +54,8 @@ params:
     textAlign: left
 
   color:
-    primaryColor: "#0d6efd"
-    secondaryBackgroundColor: "#e8f4fd"
+    primaryColor: "#1a3a6e"
+    secondaryBackgroundColor: "#eef2ff"
 
   navbar:
     align: ms-auto
