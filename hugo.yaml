@@ -92,7 +92,7 @@ params:
     socialLinks:
       fontAwesomeIcons:
         - icon: fab fa-linkedin
-          url: https://linkedin.com/in/disraelysalazar
+          url: https://www.linkedin.com/in/disraely-salazar-65328238b
         - icon: fab fa-github
           url: https://github.com/disraelysalazar
         - icon: fa fa-envelope
@@ -318,7 +318,7 @@ params:
       disableFeaturedImage: false
     socialNetworks:
       github: https://github.com/disraelysalazar
-      linkedin: https://linkedin.com/in/disraelysalazar
+      linkedin: https://www.linkedin.com/in/disraely-salazar-65328238b
 
   listPages:
     disableFeaturedImage: false
