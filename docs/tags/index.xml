@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Tags on Disraely Salazar</title>
-		<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/</link>
+		<link>http://localhost:1313/disraely-salazar.github.io/tags/</link>
 		<description>Recent content in Tags on Disraely Salazar</description>
 		<generator>Hugo</generator>
 		<language>en-us</language>
@@ -10,182 +10,224 @@
 		
 		
 		
-			<lastBuildDate>Fri, 14 Aug 2026 00:00:00 +0000</lastBuildDate>
+			<lastBuildDate>Sat, 15 Aug 2026 00:00:00 +0000</lastBuildDate>
 		
-			<atom:link href="https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/disraely-salazar.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Healthcare Tech</title>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/healthcare-tech/</link>
+				<pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/healthcare-tech/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Next.js</title>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/next.js/</link>
+				<pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/next.js/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>PostgreSQL</title>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/postgresql/</link>
+				<pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/postgresql/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Prisma</title>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/prisma/</link>
+				<pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/prisma/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SaaS</title>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/saas/</link>
+				<pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/saas/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>TypeScript</title>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/typescript/</link>
+				<pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/typescript/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Data Analysis</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/data-analysis/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/data-analysis/</link>
 				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/data-analysis/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/data-analysis/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Database Design</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/database-design/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/database-design/</link>
 				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/database-design/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/database-design/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>MySQL</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/mysql/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/mysql/</link>
 				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/mysql/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/mysql/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>SQL</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/sql/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/sql/</link>
 				<pubDate>Fri, 14 Aug 2026 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/sql/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/sql/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>AI Ethics</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/ai-ethics/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/ai-ethics/</link>
 				<pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/ai-ethics/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/ai-ethics/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Algorithmic Bias</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/algorithmic-bias/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/algorithmic-bias/</link>
 				<pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/algorithmic-bias/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/algorithmic-bias/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Data Science</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/data-science/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/data-science/</link>
 				<pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/data-science/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/data-science/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Hiring</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/hiring/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/hiring/</link>
 				<pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/hiring/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/hiring/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Machine Learning</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/machine-learning/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/machine-learning/</link>
 				<pubDate>Tue, 07 Jul 2026 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/machine-learning/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/machine-learning/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Anonymity</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/anonymity/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/anonymity/</link>
 				<pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/anonymity/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/anonymity/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Data Ethics</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/data-ethics/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/data-ethics/</link>
 				<pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/data-ethics/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/data-ethics/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Informed Consent</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/informed-consent/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/informed-consent/</link>
 				<pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/informed-consent/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/informed-consent/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Privacy</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/privacy/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/privacy/</link>
 				<pubDate>Sun, 12 Oct 2025 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/privacy/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/privacy/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Career Change</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/career-change/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/career-change/</link>
 				<pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/career-change/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/career-change/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Data Analytics</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/data-analytics/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/data-analytics/</link>
 				<pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/data-analytics/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/data-analytics/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Learning</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/learning/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/learning/</link>
 				<pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/learning/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/learning/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Personal</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/personal/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/personal/</link>
 				<pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/personal/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/personal/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Supply Chain</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/supply-chain/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/supply-chain/</link>
 				<pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/supply-chain/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/supply-chain/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Example</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/example/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/example/</link>
 				<pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/example/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/example/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Markdown Syntax</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/markdown-syntax/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/markdown-syntax/</link>
 				<pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/markdown-syntax/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/markdown-syntax/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Mathjax</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/mathjax/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/mathjax/</link>
 				<pubDate>Fri, 09 Dec 2022 19:53:33 +0530</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/mathjax/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/mathjax/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Sample</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/sample/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/sample/</link>
 				<pubDate>Sat, 03 Apr 2021 23:29:21 +0530</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/sample/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/sample/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Emoji Support</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/emoji-support/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/emoji-support/</link>
 				<pubDate>Sat, 03 Apr 2021 22:53:58 +0530</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/emoji-support/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/emoji-support/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Placeholder Text</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/placeholder-text/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/placeholder-text/</link>
 				<pubDate>Sat, 03 Apr 2021 22:41:10 +0530</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/placeholder-text/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/placeholder-text/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Rich Content</title>
-				<link>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/rich-content/</link>
+				<link>http://localhost:1313/disraely-salazar.github.io/tags/rich-content/</link>
 				<pubDate>Sat, 03 Apr 2021 19:53:33 +0530</pubDate>
-				<guid>https://disrael2021-ctrl.github.io/disraely-salazar.github.io/tags/rich-content/</guid>
+				<guid>http://localhost:1313/disraely-salazar.github.io/tags/rich-content/</guid>
 				<description></description>
 			</item>
 	</channel>

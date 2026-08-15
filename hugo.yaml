@@ -246,6 +246,26 @@ params:
   projects:
     enable: true
     items:
+      - title: Osteon — Surgical Case & Insurance Reconciliation Platform
+        content: |-
+          Built a production web app for two orthopedic surgeon partners in Barcelona to track same-day surgical cases and reconcile insurance payments against a 70/30 revenue-split agreement — replacing a paper notebook and end-of-month guesswork.
+
+          Key work: designed a PostgreSQL schema (Prisma ORM) with data minimization built in from day one — no patient name, DOB, or contact info is ever stored, only an opaque invoice reference, to reduce exposure under GDPR/LOPDGDD special-category health data rules. Built a reconciliation queue that flips a case from Pending to Reconciled the moment a real insurer payment lands, auto-computing each partner's share based on who operated. Later extended the billing model so one surgery can include multiple procedures, each billed under multiple codes with independent amounts, summing automatically into the total.
+
+          Key finding: same-day entry plus a dedicated reconciliation screen eliminated the manual month-end reconstruction that was causing payment disputes between the two partners. Also diagnosed and fixed a production serverless cold-start bug from raw Vercel logs — a login could silently fail while the database woke up.
+        featured:
+          name: Read Full Project
+          link: /blogs/osteon-surgical-case-reconciliation/
+        badges:
+          - "Next.js"
+          - "TypeScript"
+          - "PostgreSQL"
+          - "Prisma"
+          - "Auth.js"
+        links:
+          - icon: fa fa-globe
+            url: https://projectclinic-nine.vercel.app
+
       - title: Sales Performance Dashboard
         content: |-
           Built an Excel dashboard tracking monthly sales performance, lead conversion rates, and margin trends using Pivot Tables, VLOOKUP, and conditional formatting. Modelled on real data from building materials distribution.

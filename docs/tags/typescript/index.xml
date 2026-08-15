@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>TypeScript on Disraely Salazar</title>
+		<link>http://localhost:1313/disraely-salazar.github.io/tags/typescript/</link>
+		<description>Recent content in TypeScript on Disraely Salazar</description>
+		<generator>Hugo</generator>
+		<language>en-us</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 15 Aug 2026 00:00:00 +0000</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/disraely-salazar.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Osteon: Building a Surgical Case &amp; Insurance Reconciliation Platform</title>
+				<link>http://localhost:1313/disraely-salazar.github.io/blogs/osteon-surgical-case-reconciliation/</link>
+				<pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
+				<guid>http://localhost:1313/disraely-salazar.github.io/blogs/osteon-surgical-case-reconciliation/</guid>
+				<description>&lt;p&gt;My brother-in-law is a traumatologist with a private clinic partnership in Barcelona. He and his partner split every surgery&amp;rsquo;s billing 70/30 based on who operated — main surgeon gets 70%, assisting partner gets 30%, and the split flips depending on who&amp;rsquo;s in which role for a given case. The problem wasn&amp;rsquo;t the math. It was that insurers pay weeks after the surgery, often a different amount than expected, and the two of them were reconstructing who-was-owed-what from memory and a paper notebook at month end. That&amp;rsquo;s how payment disputes start between partners.&lt;/p&gt;&#xA;&lt;p&gt;I built &lt;strong&gt;Osteon&lt;/strong&gt; to fix that: a same-day entry habit (log who operated the moment the surgery happens) feeding a reconciliation queue (fill in the real insurer payment when it lands, watch the split compute itself). This is a walkthrough of the data model, the money-correctness decisions, and a couple of production infrastructure lessons that only showed up after real doctors started using it.&lt;/p&gt;</description>
+			</item>
+	</channel>
+</rss>
