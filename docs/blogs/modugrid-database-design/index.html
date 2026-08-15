@@ -341,55 +341,24 @@ Modugrid Database Design: From Business Model to MySQL | Disraely Salazar
           </div>
           
           <article class="page-content  p-2">
-          <p>One of the best ways to learn database design is to model something you already understand deeply. For this project, I used my own e-commerce business — <strong>Modugrid</strong>, a brand that sells garage floor tiles in a variety of colors and sizes, through multiple online marketplaces, with add-on installation products and a physical warehouse — as the subject for a complete MySQL relational database.</p>
-<p>This is a walkthrough of how I went from business model to working schema: identifying entities, normalizing relationships, writing constraint-safe CREATE TABLE scripts, populating the data, adding indexes, and writing analytical queries against it.</p>
+          <p>For the final project of my Data Analysis program, I designed and built a complete relational database from scratch — not a textbook example, but a real model of <strong>Modugrid</strong>, the garage floor tile business I founded. The project covers the full lifecycle of a database: requirements, schema design, normalization, implementation in MySQL, sample data, performance indexing, and analytical querying.</p>
 <hr>
 <h2 id="overview">Overview</h2>
-<p><strong>Modugrid</strong> sells modular garage floor tiles in multiple colors and configurations. Customers find the product on marketplaces like Amazon and eBay, place orders that may include add-on products (installation kits, edge pieces), and products are fulfilled from a warehouse. The business has multiple suppliers and tracks inventory across product types.</p>
-<p>The goal was to translate this business model into a normalized relational database that could answer real questions — things like:</p>
-<ul>
-<li>Which sales channels are generating the most orders?</li>
-<li>What is the total revenue per marketplace?</li>
-<li>Which products sell most frequently together as add-ons?</li>
-<li>Which suppliers provide which products?</li>
-</ul>
+<p>For the final project of my Data Analysis program, I designed and built a complete relational database from scratch — not a textbook example, but a real model of Modugrid, the garage floor tile business I founded. The project covers the full lifecycle of a database: requirements, schema design, normalization, implementation in MySQL, sample data, performance indexing, and analytical querying.</p>
 <hr>
 <h2 id="modeling-a-real-business">Modeling a Real Business</h2>
-<p>The first step was identifying the core entities and the relationships between them. Starting from what I knew about Modugrid&rsquo;s actual operations:</p>
-<p><strong>Entities identified:</strong></p>
+<p>Rather than pick a generic example, I modeled my own operation: a product catalog of interlocking tiles sold in 10 colors and multiple pack sizes, sourced from two suppliers, sold across four channels, shipped from two warehouses, with optional add-ons (lighting, edging, installation) available per order.</p>
+<p>The core design challenge was recognizing where a many-to-many relationship needed its own table. A single order can contain multiple different products and multiple add-ons at once — no single column can represent that. I resolved this with two junction tables, <code>ORDER_PRODUCTS</code> and <code>ORDER_ADDONS</code>, each using a composite primary key to link its two parent tables.</p>
+<p>The final schema totals 10 tables:</p>
 <ul>
-<li><code>PRODUCTS</code> — the tile SKUs (sizes, types)</li>
-<li><code>COLORS</code> — color variants for each product</li>
-<li><code>SUPPLIER</code> — vendors providing the products</li>
-<li><code>ORDERS</code> — customer purchase transactions</li>
-<li><code>CUSTOMER</code> — the buyer</li>
-<li><code>MARKETPLACE</code> — sales channels (Amazon, eBay, Shopify, etc.)</li>
-<li><code>WAREHOUSE</code> — where inventory is stored</li>
-<li><code>ADD_ONS</code> — supplementary products (edge trim, installation kits)</li>
-<li><code>ORDER_PRODUCTS</code> — junction table: which products are in which orders</li>
-<li><code>ORDER_ADDONS</code> — junction table: which add-ons are in which orders</li>
+<li><strong>Catalog</strong>: <code>PRODUCTS</code>, <code>COLORS</code>, <code>SUPPLIER</code></li>
+<li><strong>Transactions</strong>: <code>ORDERS</code>, <code>ORDER_PRODUCTS</code>, <code>ORDER_ADDONS</code></li>
+<li><strong>Supporting entities</strong>: <code>ADD_ONS</code>, <code>MARKETPLACE</code>, <code>WAREHOUSE</code>, <code>CUSTOMER</code></li>
 </ul>
-<p><strong>Key relationship decisions:</strong></p>
-<p>The hardest part of schema design is identifying many-to-many relationships that require junction tables. A single order can contain multiple products, and a single product can appear in many orders — that&rsquo;s <code>ORDER_PRODUCTS</code>. The same logic applies to add-ons: <code>ORDER_ADDONS</code> bridges <code>ORDERS</code> and <code>ADD_ONS</code>.</p>
-<p>This kind of normalization prevents data duplication and keeps the schema consistent as the data grows.</p>
+<p>Every foreign key relationship across the design uses consistent color-coding between the primary and foreign key sides, making the full relational structure readable at a glance before a single line of SQL was written.</p>
 <hr>
 <h2 id="implementation-in-mysql">Implementation in MySQL</h2>
-<h3 id="foreign-key-sequencing">Foreign Key Sequencing</h3>
-<p>A critical discipline in writing CREATE TABLE scripts is sequencing. A table cannot reference another table that doesn&rsquo;t exist yet. The correct build order for this schema:</p>
-<ol>
-<li><code>COLORS</code> (no dependencies)</li>
-<li><code>SUPPLIER</code> (no dependencies)</li>
-<li><code>MARKETPLACE</code> (no dependencies)</li>
-<li><code>WAREHOUSE</code> (no dependencies)</li>
-<li><code>CUSTOMER</code> (no dependencies)</li>
-<li><code>ADD_ONS</code> (no dependencies)</li>
-<li><code>PRODUCTS</code> (references COLORS, SUPPLIER, WAREHOUSE)</li>
-<li><code>ORDERS</code> (references CUSTOMER, MARKETPLACE)</li>
-<li><code>ORDER_PRODUCTS</code> (references ORDERS, PRODUCTS)</li>
-<li><code>ORDER_ADDONS</code> (references ORDERS, ADD_ONS)</li>
-</ol>
-<h3 id="sample-table-order_products">Sample Table: ORDER_PRODUCTS</h3>
-<p>The junction table connecting orders and products is a good example of the schema design pattern used throughout:</p>
+<p>With the design finalized, I wrote the full schema as a <code>CREATE TABLE</code> script — sequencing table creation so that every lookup table exists before anything references it, and every junction table is created last, after both of its parent tables:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> ORDER_PRODUCTS (
 </span></span><span style="display:flex;"><span>    Order_ID    INT,
 </span></span><span style="display:flex;"><span>    Product_ID  INT,
@@ -399,58 +368,18 @@ Modugrid Database Design: From Business Model to MySQL | Disraely Salazar
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (Order_ID)   <span style="color:#66d9ef">REFERENCES</span> ORDERS(Order_ID),
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FOREIGN</span> <span style="color:#66d9ef">KEY</span> (Product_ID) <span style="color:#66d9ef">REFERENCES</span> PRODUCTS(Product_ID)
 </span></span><span style="display:flex;"><span>);
-</span></span></code></pre></div><p>Using a <strong>composite primary key</strong> on <code>(Order_ID, Product_ID)</code> ensures each product appears only once per order, while the foreign keys enforce referential integrity — no orphan records.</p>
-<h3 id="populating-sample-data">Populating Sample Data</h3>
-<p>After creating all tables, I populated them with referentially consistent sample data. This means inserting in the same order as the CREATE TABLE sequence — you cannot insert an order referencing a customer who doesn&rsquo;t exist yet. I used realistic values: actual marketplace names, product configurations that reflect Modugrid&rsquo;s real catalog, and order amounts consistent with real e-commerce transactions.</p>
-<h3 id="indexing-strategy">Indexing Strategy</h3>
-<p>Indexes are added after the data is in place. I selected index targets based on which columns appear in WHERE clauses or JOIN conditions in realistic queries:</p>
-<ul>
-<li><code>PRODUCTS(Supplier_ID)</code> — frequent supplier lookups</li>
-<li><code>ORDERS(Marketplace_ID)</code> — channel performance queries</li>
-<li><code>ORDERS(Customer_ID)</code> — customer order history</li>
-<li><code>ORDER_PRODUCTS(Product_ID)</code> — product frequency analysis</li>
-</ul>
-<p>Adding indexes to foreign key columns speeds up JOIN performance significantly on large datasets.</p>
+</span></span></code></pre></div><p>From there, I populated every table with realistic sample data, added indexes on the columns most likely to be filtered or joined in practice — product color, supplier, customer order history, order date — and wrote a set of analytical queries covering basic selects, multi-table joins, aggregate functions, <code>WHERE</code>/<code>HAVING</code> filtering, and nested subqueries.</p>
+<p>One query identifies which sales channels are generating more orders than the channel average — the kind of question a real business owner would actually ask of their own data.</p>
 <hr>
-<h2 id="analytical-queries">Analytical Queries</h2>
-<p>The real test of a schema is whether it can answer business questions. Here are examples from this project:</p>
-<p><strong>Which marketplaces generate above-average order volume?</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> m.Name, <span style="color:#66d9ef">COUNT</span>(o.Order_ID) <span style="color:#66d9ef">AS</span> Total_Orders
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> ORDERS o
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> MARKETPLACE m <span style="color:#66d9ef">ON</span> o.Marketplace_ID <span style="color:#f92672">=</span> m.Marketplace_ID
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> m.Name
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">HAVING</span> <span style="color:#66d9ef">COUNT</span>(o.Order_ID) <span style="color:#f92672">&gt;</span> (
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">AVG</span>(order_count)
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">FROM</span> (
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">SELECT</span> <span style="color:#66d9ef">COUNT</span>(Order_ID) <span style="color:#66d9ef">AS</span> order_count
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">FROM</span> ORDERS
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> Marketplace_ID
-</span></span><span style="display:flex;"><span>    ) <span style="color:#66d9ef">AS</span> avg_orders
-</span></span><span style="display:flex;"><span>);
-</span></span></code></pre></div><p>This uses a subquery to compute the average and a HAVING clause to filter channels that exceed it — translating a direct business question into SQL.</p>
-<p><strong>Total revenue and units sold per product:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> p.Name, <span style="color:#66d9ef">SUM</span>(op.Quantity) <span style="color:#66d9ef">AS</span> Units_Sold, <span style="color:#66d9ef">SUM</span>(op.Quantity <span style="color:#f92672">*</span> op.Price) <span style="color:#66d9ef">AS</span> Revenue
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> ORDER_PRODUCTS op
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> PRODUCTS p <span style="color:#66d9ef">ON</span> op.Product_ID <span style="color:#f92672">=</span> p.Product_ID
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> p.Name
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> Revenue <span style="color:#66d9ef">DESC</span>;
-</span></span></code></pre></div><p><strong>Which add-ons are purchased most frequently?</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> a.Name, <span style="color:#66d9ef">COUNT</span>(oa.Order_ID) <span style="color:#66d9ef">AS</span> Frequency
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> ORDER_ADDONS oa
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">JOIN</span> ADD_ONS a <span style="color:#66d9ef">ON</span> oa.AddOn_ID <span style="color:#f92672">=</span> a.AddOn_ID
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> a.Name
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> Frequency <span style="color:#66d9ef">DESC</span>;
-</span></span></code></pre></div><hr>
 <h2 id="skills-demonstrated">Skills Demonstrated</h2>
-<p>This project covered the full lifecycle of relational database work:</p>
 <ul>
-<li><strong>Schema design</strong> — entity identification, normalization to 3NF, junction table construction</li>
-<li><strong>Constraint-safe CREATE TABLE scripts</strong> — correct foreign key sequencing to avoid dependency errors</li>
-<li><strong>Sample data population</strong> — referentially consistent inserts across 10 tables</li>
-<li><strong>Index selection</strong> — targeting high-frequency JOIN and WHERE columns</li>
-<li><strong>SQL querying</strong> — multi-table JOINs, GROUP BY with HAVING, aggregate functions, nested subqueries</li>
+<li>Relational schema design and normalization, including correctly identifying when a many-to-many relationship requires a junction table</li>
+<li>Writing constraint-safe <code>CREATE TABLE</code> scripts with proper foreign key sequencing</li>
+<li>Populating a multi-table schema with referentially consistent sample data</li>
+<li>Index selection based on realistic query patterns</li>
+<li>SQL querying: joins, aggregate functions, <code>GROUP BY</code>/<code>HAVING</code>, and nested subqueries</li>
+<li>Debugging real MySQL errors by reading server error messages precisely rather than guessing at fixes</li>
 </ul>
-<p>The full 10-table schema — PRODUCTS, COLORS, SUPPLIER, ORDERS, ORDER_PRODUCTS, ORDER_ADDONS, ADD_ONS, MARKETPLACE, WAREHOUSE, and CUSTOMER — models a real e-commerce operation with enough complexity to practice every major SQL skill in a meaningful context.</p>
 <hr>
 <p><em>Disraely Salazar is a Data Analytics student at triOS College in Toronto, ON, with a background in business operations and supply chain management.</em></p>
           </article>
@@ -468,15 +397,7 @@ Modugrid Database Design: From Business Model to MySQL | Disraely Salazar
   <ul>
     <li><a href="#overview">Overview</a></li>
     <li><a href="#modeling-a-real-business">Modeling a Real Business</a></li>
-    <li><a href="#implementation-in-mysql">Implementation in MySQL</a>
-      <ul>
-        <li><a href="#foreign-key-sequencing">Foreign Key Sequencing</a></li>
-        <li><a href="#sample-table-order_products">Sample Table: ORDER_PRODUCTS</a></li>
-        <li><a href="#populating-sample-data">Populating Sample Data</a></li>
-        <li><a href="#indexing-strategy">Indexing Strategy</a></li>
-      </ul>
-    </li>
-    <li><a href="#analytical-queries">Analytical Queries</a></li>
+    <li><a href="#implementation-in-mysql">Implementation in MySQL</a></li>
     <li><a href="#skills-demonstrated">Skills Demonstrated</a></li>
   </ul>
 </nav>
@@ -639,7 +560,7 @@ Modugrid Database Design: From Business Model to MySQL | Disraely Salazar
                         <h5 class="card-title bg-transparent" title="Modugrid Database Design: From Business Model to MySQL">Modugrid Database Design: …</h5>
                     </a>
                     <div class="card-text secondary-font">
-                        <p><p>One of the best ways to learn database design is to model something you already understand deeply. For this project, I used my own e-commerce business — <strong>Modugrid</strong>, a brand that sells garage floor tiles in a variety of colors and sizes, through multiple online marketplaces, with add-on installation …</p></p>
+                        <p><p>For the final project of my Data Analysis program, I designed and built a complete relational database from scratch — not a textbook example, but a real model of <strong>Modugrid</strong>, the garage floor tile business I founded. The project covers the full lifecycle of a database: requirements, schema design, …</p></p>
                     </div>
                 </div>
                 <div class="mt-auto card-footer">
