@@ -32,11 +32,6 @@ Menus:
       title: Blog Posts
       url: /blogs
       weight: 1
-    - identifier: gallery
-      name: Gallery
-      title: Gallery
-      url: /gallery
-      weight: 2
 
 params:
   title: "Disraely Salazar"
@@ -256,7 +251,6 @@ params:
           Built an Excel dashboard tracking monthly sales performance, lead conversion rates, and margin trends using Pivot Tables, VLOOKUP, and conditional formatting. Modelled on real data from building materials distribution.
 
           Key finding: 3 of 7 product lines accounted for 80% of monthly margin — concentrating sales effort on highest-value opportunities. Dynamic filters allow weekly vs. monthly performance comparison at a glance.
-        image: /images/projects/profile.png
         featured:
           name: GitHub Profile
           link: https://github.com/disraelysalazar
@@ -273,7 +267,6 @@ params:
           Applied SQL and Python (Pandas) to analyze supplier performance in a simulated distribution dataset modelled on real supply chain operations I managed professionally at The Beer Store and Incosaca.
 
           Key finding: Identified 2 supplier patterns with 35%+ delivery deviation from contracted timelines — consistent with the type of discrepancies I resolved in $2–3M/month operations. Estimated $12–15K annual cost impact in rework and expediting.
-        image: /images/projects/converter.jpg
         featured:
           name: GitHub Profile
           link: https://github.com/disraelysalazar
@@ -290,7 +283,6 @@ params:
           Performed RFM (Recency, Frequency, Monetary) segmentation on a retail dataset using Python and visualized customer groups in Tableau to support targeting and retention decisions.
 
           Key finding: Segmented 1,200+ customers into 4 behavioral groups. The top "Champions" segment — 14% of customers — drove 61% of total revenue. Insight directly supports upsell and loyalty prioritization strategy.
-        image: /images/projects/profile2.jpg
         featured:
           name: GitHub Profile
           link: https://github.com/disraelysalazar
@@ -298,6 +290,25 @@ params:
           - "Python"
           - "Tableau"
           - "RFM Analysis"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/disraelysalazar
+
+      - title: Modugrid Database Design
+        content: |-
+          Designed and built a complete 10-table relational MySQL database modeling my own e-commerce business — Modugrid, a garage floor tile brand with multiple products, colors, suppliers, warehouses, sales channels, and customer add-ons.
+
+          Key work: mapped entity relationships and identified many-to-many cases requiring junction tables (ORDER_PRODUCTS, ORDER_ADDONS), wrote constraint-safe CREATE TABLE scripts with correct foreign key sequencing, populated all tables with referentially consistent sample data, added strategic indexes based on realistic query patterns, and wrote analytical queries using joins, GROUP BY, HAVING, and subqueries.
+
+          Key finding: A channel performance query identifies which marketplaces generate above-average order volume — translating a direct business question into SQL insight.
+        featured:
+          name: Read Full Project
+          link: /blogs/modugrid-database-design/
+        badges:
+          - "MySQL"
+          - "Database Design"
+          - "Normalization"
+          - "SQL"
         links:
           - icon: fab fa-github
             url: https://github.com/disraelysalazar
